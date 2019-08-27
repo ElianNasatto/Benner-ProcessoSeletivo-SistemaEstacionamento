@@ -1,0 +1,5 @@
+C:\Users\elian\source\repos\SistemaEstacionamento\View\obj\Debug\View.csprojAssemblyReference.cache
+C:\Users\elian\source\repos\SistemaEstacionamento\View\obj\Debug\View.Form1.resources
+C:\Users\elian\source\repos\SistemaEstacionamento\View\obj\Debug\View.Properties.Resources.resources
+C:\Users\elian\source\repos\SistemaEstacionamento\View\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\elian\source\repos\SistemaEstacionamento\View\obj\Debug\View.csproj.CoreCompileInputs.cache

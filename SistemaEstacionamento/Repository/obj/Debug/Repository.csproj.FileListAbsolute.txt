@@ -1,0 +1,2 @@
+C:\Users\elian\source\repos\SistemaEstacionamento\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\Users\elian\source\repos\SistemaEstacionamento\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
