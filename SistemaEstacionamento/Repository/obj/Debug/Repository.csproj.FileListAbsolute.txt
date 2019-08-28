@@ -1,2 +1,17 @@
 C:\Users\elian\source\repos\SistemaEstacionamento\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
 C:\Users\elian\source\repos\SistemaEstacionamento\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\Repository.dll.config
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\Repository.dll
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\Repository.pdb
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\EntityFramework.dll
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\Model.dll
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\Model.pdb
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\EntityFramework.xml
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.dll
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.pdb
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\Model.dll.config

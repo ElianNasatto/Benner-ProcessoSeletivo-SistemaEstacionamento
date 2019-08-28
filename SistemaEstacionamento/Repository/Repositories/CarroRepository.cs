@@ -62,5 +62,18 @@ namespace Repository.Repositories
         {
             return context.Carros.Where(x => x.RegistroAtivo == true).ToList();
         }
+
+        public bool VerificaJaCadastrado(string placa)
+        {
+            var carro = context.Carros.Where(x => x.Placa == placa && x.RegistroAtivo == true).FirstOrDefault();
+            if (carro == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

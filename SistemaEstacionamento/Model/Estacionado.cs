@@ -14,11 +14,17 @@ namespace Model
         [Key,Column("id_estacionado")]
         public int IdEstacionado { get; set; }
 
-        [ForeignKey("id_preco")]
-        public Preco Preco { get; set; }
+        [Column("id_carro")]
+        public int IdCarro { get; set; }
 
-        [ForeignKey("id_carro")]
+        [ForeignKey("IdCarro")]
         public Carro Carro { get; set; }
+        
+        [Column("id_preco")]
+        public int IdPreco { get; set; }
+
+        [ForeignKey("IdPreco")]
+        public Preco Preco { get; set; }
 
         [Column("data_entrada")]
         public DateTime DataEntrada { get; set; }

@@ -17,6 +17,6 @@ namespace Repository.Interfaces
 
         bool Apagar(int id);
 
-        Estacionado ObterPelaPlaca(int placa);
+        Estacionado ObterPelaPlaca(string placa);
     }
 }

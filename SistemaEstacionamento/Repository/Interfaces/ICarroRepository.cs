@@ -18,5 +18,7 @@ namespace Repository.Interfaces
         bool Apagar(int placa);
 
         Carro ObterPelaPlaca(string placa);
+
+        bool VerificaJaCadastrado(string placa);
     }
 }
