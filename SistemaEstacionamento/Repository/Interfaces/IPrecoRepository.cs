@@ -18,5 +18,7 @@ namespace Repository.Interfaces
         bool Apagar(int id);
 
         Preco ObterPeloId(int id);
+
+        bool VerificaJaCadastrado(DateTime dataInicial, DateTime dataFinal);
     }
 }
