@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Model;
+using Repository.Repositories;
+using System;
 using System.Windows.Forms;
 
 namespace View
 {
     public partial class TelaSaida : Form
     {
+        private EstacionadoRepository repository = new EstacionadoRepository();
+        static Preco preco = new Preco();
+
+
         public TelaSaida()
         {
             InitializeComponent();
@@ -20,7 +19,19 @@ namespace View
         private void Button2_Click(object sender, EventArgs e)
         {
             TelaPrecos tela = new TelaPrecos();
-            tela.Show();
+            tela.ShowDialog();
+            PrecoRepository repositoryPreco = new PrecoRepository();
+            preco = repositoryPreco.ObterPeloId(tela.idPreco);
+            maskedTextBox1.Text = preco.PrecoHora.ToString();
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
+
+
 }

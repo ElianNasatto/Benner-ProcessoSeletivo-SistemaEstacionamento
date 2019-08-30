@@ -45,6 +45,12 @@ namespace View
                 dataGridView1.Rows.Add(new object[] {estacionado.IdEstacionado,estacionado.Carro.Placa,estacionado.DataEntrada,estacionado.DataSaida,estacionado.Duracao,estacionado.Preco,estacionado.TempoCobrado,estacionado.ValorPagar });
             }
         }
+
+        private void BtnSaida_Click(object sender, EventArgs e)
+        {
+            TelaSaida tela = new TelaSaida();
+            tela.Show();
+        }
     }
 }
 

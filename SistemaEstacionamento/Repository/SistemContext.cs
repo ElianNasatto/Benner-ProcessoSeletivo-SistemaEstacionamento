@@ -15,7 +15,6 @@ namespace Repository
 
         }
 
-
         public DbSet<Preco> Precos { get; set; }
 
         public DbSet<Carro> Carros { get; set; }

@@ -157,6 +157,7 @@
             this.btnSaida.TabIndex = 2;
             this.btnSaida.Text = "Marcar Saida";
             this.btnSaida.UseVisualStyleBackColor = false;
+            this.btnSaida.Click += new System.EventHandler(this.BtnSaida_Click);
             // 
             // pictureBox1
             // 
@@ -199,7 +200,7 @@
             this.panel1.Controls.Add(this.btnSaida);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1236, 140);
+            this.panel1.Size = new System.Drawing.Size(926, 140);
             this.panel1.TabIndex = 6;
             // 
             // label3

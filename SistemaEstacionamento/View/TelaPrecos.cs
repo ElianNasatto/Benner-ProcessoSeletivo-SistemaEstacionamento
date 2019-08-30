@@ -10,17 +10,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace View
 {
     public partial class TelaPrecos : Form
     {
         private PrecoRepository repository = new PrecoRepository();
-        private int idAalterar = -1;
         public TelaPrecos()
         {
             InitializeComponent();
         }
 
+        public int idPreco
+        {
+            get { return Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value); }
+            set { Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value); }
+        }
+
+        private int idAlterar = -1;
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             string valor = maskedTextBox1.Text;
@@ -39,7 +46,7 @@ namespace View
                 return;
             }
 
-            if (idAalterar == -1)
+            if (idAlterar == -1)
             {
                 if (repository.VerificaJaCadastrado(dataInicial, dataFinal) == false)
                 {
@@ -64,7 +71,7 @@ namespace View
             else
             {
                 Preco preco = new Preco();
-                preco.IdPreco = idAalterar;
+                preco.IdPreco = idAlterar;
                 preco.DataInicial = dataInicial;
                 preco.DataFinal = dataFinal;
                 valor = valor.Replace("R$", "");
@@ -72,7 +79,7 @@ namespace View
                 preco.RegistroAtivo = true;
                 repository.Alterar(preco);
 
-                idAalterar = -1;
+                idAlterar = -1;
                 btnApagar.Enabled = true;
                 dataGridView1.Enabled = true;
                 AtualizaTabela();
@@ -130,7 +137,7 @@ namespace View
                 dateTimePicker1.Value = preco.DataInicial;
                 dateTimePicker2.Value = preco.DataFinal;
                 maskedTextBox1.Text = preco.PrecoHora.ToString();
-                idAalterar = id;
+                idAlterar = id;
                 btnApagar.Enabled = false;
                 dataGridView1.Enabled = false;
             }
@@ -141,6 +148,19 @@ namespace View
             
 
            
+        }
+
+        private void DataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                TelaPrecos.ActiveForm.Close();
+            }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

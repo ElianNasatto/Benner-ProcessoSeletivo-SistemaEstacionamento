@@ -125,7 +125,7 @@ namespace View
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Test");
+                TelaCarros.ActiveForm.Close();
             }
         }
 
@@ -133,7 +133,11 @@ namespace View
         {
             
         }
-
+        public string Placa
+        {
+            get { return dataGridView1.CurrentRow.Cells[1].Value.ToString(); }
+            set { dataGridView1.CurrentRow.Cells[1].Value.ToString() ; }
+        }
         //Botao buscar
         private void MaskedTextBox2_KeyDown(object sender, KeyEventArgs e)
         {
@@ -150,6 +154,11 @@ namespace View
                     dataGridView1.Rows.Add(new object[] { carro.Id, carro.Placa });
                 }
             }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

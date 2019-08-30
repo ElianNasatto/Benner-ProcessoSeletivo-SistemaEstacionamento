@@ -29,3 +29,4 @@ C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\Si
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.TelaEntrada.resources
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.TelaCarros.resources
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.TelaPrecos.resources
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.TelaSaida.resources
