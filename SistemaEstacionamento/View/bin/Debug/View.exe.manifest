@@ -85,19 +85,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F0Rsbo6vcA65Z3dJn3+oXw0T72r1LnyZ4Lbd2XKe5lI=</dsig:DigestValue>
+        <dsig:DigestValue>DFF+rEVd3e7fmD5ouOEOvV0Xv3+tP/7FmmVdx+oWrnU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="View.exe" size="394704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="View.exe" size="500176">
       <assemblyIdentity name="View" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v9PIh6kOgR0m9Qyk/PrkZRE2X4Qn2hbP6lcYq408ayQ=</dsig:DigestValue>
+        <dsig:DigestValue>B0k14fZcZqRbXCM1e7CMktWjpN4IxEhz+zPG8BppSrs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -90,10 +90,15 @@ namespace View
                     {
                         textBox2.Text = tempo;
                         DateTime tempoDate = Convert.ToDateTime(tempo);
-                        
+                        decimal precoMeiaHora = 0;
                         int hora = (tempoDate.Hour);
                         int minutos = tempoDate.Minute;
-                        textBox4.Text = (hora * (preco.PrecoHora)).ToString();
+
+                        if (minutos > 11)
+                        {
+                            precoMeiaHora = preco.PrecoHora / 2;
+                        }
+                        textBox4.Text = (hora * (preco.PrecoHora)+precoMeiaHora).ToString();
 
 
                     }

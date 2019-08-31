@@ -46,7 +46,7 @@ namespace View
             List<Estacionado> lista = repository.ObterTodosAberto();
             foreach (Estacionado estacionado in lista)
             {
-                dataGridView1.Rows.Add(estacionado.IdEstacionado, estacionado.Carro.Placa, estacionado.DataEntrada, estacionado.DataSaida, estacionado.Duracao, estacionado.Preco, estacionado.TempoCobrado, estacionado.ValorPagar);
+                    dataGridView1.Rows.Add(estacionado.IdEstacionado, estacionado.Carro.Placa, estacionado.DataEntrada);
             }
         }
 
@@ -66,6 +66,15 @@ namespace View
 
         private void DataGridView1_DoubleClick(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == 1)
+            {
+                return;
+            }
+            else if ((comboBox1.SelectedIndex == 2) && (dataGridView1.CurrentRow.Cells[3].Value.ToString() != "Nulo"))
+            {
+                return;
+            }
+
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 TelaSaida tela = new TelaSaida(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
@@ -94,6 +103,7 @@ namespace View
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             maskedTextBox1.Visible = false;
+            btnSaida.Visible = true;
             label5.Visible = false;
             dataGridView1.Columns[3].Visible = false;
             dataGridView1.Columns[4].Visible = false;
@@ -113,15 +123,23 @@ namespace View
                 dataGridView1.Columns[5].Visible = true;
                 dataGridView1.Columns[6].Visible = true;
                 dataGridView1.Columns[7].Visible = true;
-                 
+                btnSaida.Visible = false;
+
                 foreach (Estacionado estacionado in repository.ObterTodosFechados())
                 {
-                    dataGridView1.Rows.Add(estacionado.IdEstacionado, estacionado.Carro.Placa, estacionado.DataEntrada, estacionado.DataSaida, estacionado.Duracao,"estacionado.TempoCobrado", estacionado.Preco.PrecoHora, estacionado.ValorPagar);
+                    dataGridView1.Rows.Add(estacionado.IdEstacionado, estacionado.Carro.Placa, estacionado.DataEntrada, estacionado.DataSaida, estacionado.Duracao, "estacionado.TempoCobrado", estacionado.Preco.PrecoHora, estacionado.ValorPagar);
                 }
             }
             else if (comboBox1.SelectedIndex == 2)
             {
+                dataGridView1.Rows.Clear();
+                dataGridView1.Columns[3].Visible = true;
+                dataGridView1.Columns[4].Visible = true;
+                dataGridView1.Columns[5].Visible = true;
+                dataGridView1.Columns[6].Visible = true;
+                dataGridView1.Columns[7].Visible = true;
                 maskedTextBox1.Visible = true;
+                btnSaida.Visible = false;
                 label5.Visible = true;
             }
         }
@@ -134,15 +152,26 @@ namespace View
                 if (maskedTextBox1.Text.Length < 9)
                 {
                     dataGridView1.Rows.Clear();
-                    Estacionado estacionado = repository.ObterPelaPlaca(maskedTextBox1.Text);
-                    if (estacionado == null)
+                    List<Estacionado> lista = repository.ObterTodosPelaPlaca(maskedTextBox1.Text.ToUpper());
+                    if (lista == null)
                     {
                         MessageBox.Show("Placa não contem nehuma marcação", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         comboBox1.SelectedIndex = 0;
                     }
                     else
                     {
-                        dataGridView1.Rows.Add(estacionado.IdEstacionado, estacionado.Carro.Placa, estacionado.DataEntrada, estacionado.DataSaida, estacionado.Duracao, estacionado.Preco, estacionado.TempoCobrado, estacionado.ValorPagar);
+                        foreach (Estacionado estacionadoPlaca in lista)
+                        {
+                            if (estacionadoPlaca.Preco == null)
+                            {
+                                dataGridView1.Rows.Add(estacionadoPlaca.IdEstacionado, estacionadoPlaca.Carro.Placa, estacionadoPlaca.DataEntrada, "Nulo", "Nulo", "Nulo", "Nulo","Nulo");
+                            }
+                            else
+                            {
+                            dataGridView1.Rows.Add(estacionadoPlaca.IdEstacionado, estacionadoPlaca.Carro.Placa, estacionadoPlaca.DataEntrada, estacionadoPlaca.DataSaida, estacionadoPlaca.Duracao, estacionadoPlaca.TempoCobrado, estacionadoPlaca.Preco.PrecoHora, estacionadoPlaca.ValorPagar);
+                            }
+
+                        }
                     }
                 }
                 else
@@ -153,9 +182,15 @@ namespace View
             }
         }
 
-        private void TelaInicial_Load_1(object sender, EventArgs e)
+        private void TelaInicial_Activated_1(object sender, EventArgs e)
         {
+            comboBox1.SelectedIndex = 0;
+        }
 
+        private void SobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaSobre tela = new TelaSobre();
+            tela.Show();
         }
     }
 }

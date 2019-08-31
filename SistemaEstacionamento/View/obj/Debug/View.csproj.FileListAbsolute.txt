@@ -29,3 +29,4 @@ C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\Si
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.application
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\App_Data\Database.mdf
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\App_Data\Database_log.ldf
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.TelaSobre.resources

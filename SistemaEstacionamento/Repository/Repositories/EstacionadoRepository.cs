@@ -80,6 +80,11 @@ namespace Repository.Repositories
             return context.Estacionados.Include("Carro").Include("Preco").Where(x=> x.RegistroAtivo == false).ToList();
         }
 
+        public List<Estacionado> ObterTodosPelaPlaca(string placa)
+        {
+            return context.Estacionados.Include("carro").Include("preco").Where(x => x.Carro.Placa == placa).ToList();
+        }
+
         public bool VerificaJaEstaEstacionado(string placa)
         {
             var estacionado = context.Estacionados.Include("carro").Where(x => x.Carro.Placa == placa && x.RegistroAtivo == true).FirstOrDefault();

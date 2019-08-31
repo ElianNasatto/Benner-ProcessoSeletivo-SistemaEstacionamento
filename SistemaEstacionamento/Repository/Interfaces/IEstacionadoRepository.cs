@@ -17,12 +17,12 @@ namespace Repository.Interfaces
 
         List<Estacionado> ObterTodosFechados();
 
-        bool Apagar(int id);
-
         Estacionado ObterPelaPlaca(string placa);
 
         Estacionado ObterPeloId(int idEstacionado);
 
         bool VerificaJaEstaEstacionado(string placa);
+
+        List<Estacionado> ObterTodosPelaPlaca(string placa);
     }
 }
