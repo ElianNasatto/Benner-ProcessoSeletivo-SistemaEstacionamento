@@ -40,34 +40,34 @@ namespace View
                 precoMenor = "0" + precoMenor;
             }
             maskedTextBox1.Text = precoMenor;
-           
+
         }
 
         //Botão salvar
         private void Button3_Click(object sender, EventArgs e)
         {
+            estacionado.DataEntrada = dateTimePicker1.Value;
             estacionado.DataSaida = dateTimePicker2.Value;
             estacionado.Duracao = textBox2.Text;
-            estacionado.ValorPagar = Convert.ToDecimal(textBox4.Text);
             estacionado.IdPreco = preco.IdPreco;
             estacionado.RegistroAtivo = false;
             bool fechado = repository.Alterar(estacionado);
             if (fechado == true)
             {
-                MessageBox.Show("Saida marcada","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Saida marcada", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TelaSaida.ActiveForm.Close();
             }
             else
             {
-                MessageBox.Show("Ocorreu um erro ao marcar a saida, tente novamente ou contate o suporte","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro ao marcar a saida, tente novamente ou contate o suporte", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TelaSaida.ActiveForm.Close();
             }
-            
+
         }
 
-       
 
-       
+
+
         //Calcula a duração
         private void DateTimePicker2_KeyDown(object sender, KeyEventArgs e)
         {
@@ -90,16 +90,35 @@ namespace View
                     {
                         textBox2.Text = tempo;
                         DateTime tempoDate = Convert.ToDateTime(tempo);
-                        decimal precoMeiaHora = 0;
+                        decimal precoMeiaHora = preco.PrecoHora / 2;
+
                         int hora = (tempoDate.Hour);
-                        int minutos = tempoDate.Minute;
+                        int minutos = (tempoDate.Minute);
 
-                        if (minutos > 11)
+                        int quantidadeMeiaHora = hora * 2;
+
+                        if ((minutos > 0) && (minutos <= 30))
                         {
-                            precoMeiaHora = preco.PrecoHora / 2;
+                            quantidadeMeiaHora++;
                         }
-                        textBox4.Text = (hora * (preco.PrecoHora)+precoMeiaHora).ToString();
+                        else if (minutos > 30)
+                        {
+                            quantidadeMeiaHora += 2;
 
+                        }
+
+                        estacionado.Duracao = tempo;
+                        if (quantidadeMeiaHora % 2 == 0)
+                        {
+                            estacionado.TempoCobrado = (quantidadeMeiaHora / 2).ToString();
+                        }
+                        else
+                        {
+                            estacionado.TempoCobrado = ((quantidadeMeiaHora / 2).ToString()+ ":30");
+                        }
+                        estacionado.ValorPagar = quantidadeMeiaHora * (preco.PrecoHora / 2);
+                        textBox4.Text = estacionado.ValorPagar.ToString();
+                        textBox3.Text = estacionado.TempoCobrado;
 
                     }
                 }
@@ -109,7 +128,7 @@ namespace View
 
         private void MaskedTextBox1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
     }
 

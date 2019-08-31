@@ -26,6 +26,8 @@ namespace Repository.Repositories
             {
                 estacionadoOriginal.IdEstacionado = estacionado.IdEstacionado;
                 estacionadoOriginal.DataSaida = estacionado.DataSaida;
+                estacionadoOriginal.DataEntrada = estacionado.DataEntrada;
+                estacionadoOriginal.TempoCobrado = estacionado.TempoCobrado;
                 estacionadoOriginal.Duracao = estacionado.Duracao;
                 estacionadoOriginal.ValorPagar = estacionado.ValorPagar;
                 estacionadoOriginal.IdPreco = estacionado.IdPreco;

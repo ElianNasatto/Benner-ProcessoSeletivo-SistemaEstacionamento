@@ -125,9 +125,11 @@ namespace View
                 dataGridView1.Columns[7].Visible = true;
                 btnSaida.Visible = false;
 
-                foreach (Estacionado estacionado in repository.ObterTodosFechados())
+                foreach (Estacionado estacionadoFechado in repository.ObterTodosFechados())
                 {
-                    dataGridView1.Rows.Add(estacionado.IdEstacionado, estacionado.Carro.Placa, estacionado.DataEntrada, estacionado.DataSaida, estacionado.Duracao, "estacionado.TempoCobrado", estacionado.Preco.PrecoHora, estacionado.ValorPagar);
+                    dataGridView1.Rows.Add(estacionadoFechado.IdEstacionado, estacionadoFechado.Carro.Placa, estacionadoFechado.DataEntrada, 
+                        estacionadoFechado.DataSaida, estacionadoFechado.Duracao,
+                        estacionadoFechado.TempoCobrado, estacionadoFechado.Preco.PrecoHora, estacionadoFechado.ValorPagar);
                 }
             }
             else if (comboBox1.SelectedIndex == 2)

@@ -78,26 +78,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Repository.dll" size="18944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Repository.dll" size="19456">
       <assemblyIdentity name="Repository" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DFF+rEVd3e7fmD5ouOEOvV0Xv3+tP/7FmmVdx+oWrnU=</dsig:DigestValue>
+        <dsig:DigestValue>hmOoi3HJmElhHG/dYiBwVcqQOOszj8Xt+ffQfVkjJk4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="View.exe" size="500176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="View.exe" size="500688">
       <assemblyIdentity name="View" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>B0k14fZcZqRbXCM1e7CMktWjpN4IxEhz+zPG8BppSrs=</dsig:DigestValue>
+        <dsig:DigestValue>FywUmQOtXA2DF8VBEkoEEVqlJ3tKPG304F4Isj52YsQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
