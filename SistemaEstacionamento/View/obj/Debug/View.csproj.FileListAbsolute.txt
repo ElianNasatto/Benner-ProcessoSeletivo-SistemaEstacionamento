@@ -1,5 +1,3 @@
-C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\App_Data\Database.mdf
-C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\App_Data\Database_log.ldf
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\View.exe.config
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\View.exe
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\View.pdb
@@ -25,3 +23,9 @@ C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\Si
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.exe
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.pdb
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\View.exe.manifest
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\View.application
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.exe.manifest
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\obj\Debug\View.application
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\App_Data\Database.mdf
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\View\bin\Debug\App_Data\Database_log.ldf

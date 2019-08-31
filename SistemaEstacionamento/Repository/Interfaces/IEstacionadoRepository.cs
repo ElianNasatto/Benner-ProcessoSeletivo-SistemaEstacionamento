@@ -13,10 +13,16 @@ namespace Repository.Interfaces
 
         bool Alterar(Estacionado estacionado);
 
-        List<Estacionado> ObterTodos();
+        List<Estacionado> ObterTodosAberto();
+
+        List<Estacionado> ObterTodosFechados();
 
         bool Apagar(int id);
 
         Estacionado ObterPelaPlaca(string placa);
+
+        Estacionado ObterPeloId(int idEstacionado);
+
+        bool VerificaJaEstaEstacionado(string placa);
     }
 }

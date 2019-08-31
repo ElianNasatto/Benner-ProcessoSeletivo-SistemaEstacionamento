@@ -136,7 +136,12 @@ namespace View
                 Preco preco = repository.ObterPeloId(id);
                 dateTimePicker1.Value = preco.DataInicial;
                 dateTimePicker2.Value = preco.DataFinal;
-                maskedTextBox1.Text = preco.PrecoHora.ToString();
+                string precoMenor = preco.PrecoHora.ToString();
+                if (precoMenor.Length <5)
+                {
+                    precoMenor = "0" + precoMenor;
+                }
+                maskedTextBox1.Text = precoMenor;
                 idAlterar = id;
                 btnApagar.Enabled = false;
                 dataGridView1.Enabled = false;

@@ -33,10 +33,10 @@ namespace Model
         public DateTime DataSaida { get; set; }
 
         [Column("duracao")]
-        public decimal Duracao { get; set; }
+        public string Duracao { get; set; }
 
         [Column("tempo_cobrado")]
-        public int TempoCobrado { get; set; }
+        public string TempoCobrado { get; set; }
 
         [Column("valor_pagar")]
         public decimal ValorPagar { get; set; }

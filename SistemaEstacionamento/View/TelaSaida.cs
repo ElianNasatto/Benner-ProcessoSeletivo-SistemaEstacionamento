@@ -12,10 +12,10 @@ namespace View
         Estacionado estacionado = new Estacionado();
 
         //Recebe como parametro da tela inicial a placa e busca no banco informações do estacionamento
-        public TelaSaida(string placa)
+        public TelaSaida(int idEstacionado)
         {
             InitializeComponent();
-            estacionado = repository.ObterPelaPlaca(placa);
+            estacionado = repository.ObterPeloId(idEstacionado);
             textBox1.Text = estacionado.Carro.Placa;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm";
             dateTimePicker2.CustomFormat = "yyyy-MM-dd HH:mm";
@@ -32,13 +32,37 @@ namespace View
             tela.ShowDialog();
             PrecoRepository repositoryPreco = new PrecoRepository();
             preco = repositoryPreco.ObterPeloId(tela.idPreco);
-            maskedTextBox1.Text = preco.PrecoHora.ToString();
+
+            //Se o valor da hora for menor que 10, ele ira acrescentar um 0 antes do numero devido a mascara
+            string precoMenor = preco.PrecoHora.ToString();
+            if (precoMenor.Length < 5)
+            {
+                precoMenor = "0" + precoMenor;
+            }
+            maskedTextBox1.Text = precoMenor;
+           
         }
 
         //Botão salvar
         private void Button3_Click(object sender, EventArgs e)
         {
-
+            estacionado.DataSaida = dateTimePicker2.Value;
+            estacionado.Duracao = textBox2.Text;
+            estacionado.ValorPagar = Convert.ToDecimal(textBox4.Text);
+            estacionado.IdPreco = preco.IdPreco;
+            estacionado.RegistroAtivo = false;
+            bool fechado = repository.Alterar(estacionado);
+            if (fechado == true)
+            {
+                MessageBox.Show("Saida marcada","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                TelaSaida.ActiveForm.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu um erro ao marcar a saida, tente novamente ou contate o suporte","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                TelaSaida.ActiveForm.Close();
+            }
+            
         }
 
        
@@ -49,24 +73,38 @@ namespace View
         {
             if (e.KeyCode == Keys.Enter)
             {
-                string tempo = (dateTimePicker2.Value - dateTimePicker1.Value).ToString();
-                if (tempo.Contains("-"))
+                if (maskedTextBox1.Text == "R$  ,")
                 {
-                    MessageBox.Show("Você selecionou o horario de saida antes da entrada", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    dateTimePicker2.Focus();
+                    MessageBox.Show("Selecione primeiro o preço", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    button2.Focus();
                 }
                 else
                 {
-                    textBox2.Text = tempo.ToString();
-                    DateTime tempoDate = Convert.ToDateTime(tempo);
-                    decimal minutosHora = (tempoDate.Hour * 60);
-                    int minutos = tempoDate.Minute;
-                    textBox4.Text = ( (minutosHora+minutos) * (preco.PrecoHora * 60)).ToString();
-                    
+                    string tempo = (dateTimePicker2.Value - dateTimePicker1.Value).ToString();
+                    if (tempo.Contains("-"))
+                    {
+                        MessageBox.Show("Você selecionou o horario de saida antes da entrada", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dateTimePicker2.Focus();
+                    }
+                    else
+                    {
+                        textBox2.Text = tempo;
+                        DateTime tempoDate = Convert.ToDateTime(tempo);
+                        
+                        int hora = (tempoDate.Hour);
+                        int minutos = tempoDate.Minute;
+                        textBox4.Text = (hora * (preco.PrecoHora)).ToString();
 
+
+                    }
                 }
             }
 
+        }
+
+        private void MaskedTextBox1_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 

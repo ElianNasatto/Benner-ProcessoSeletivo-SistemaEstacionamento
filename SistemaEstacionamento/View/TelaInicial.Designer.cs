@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInicial));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDuracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTempoCobrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnValorPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnSaida = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,14 +49,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.estacionadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.todosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcarEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,29 +69,91 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnPlaca,
-            this.ColumnHoraEntrada});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 197);
+            this.ColumnHoraEntrada,
+            this.ColumnHoraSaida,
+            this.ColumnDuracao,
+            this.ColumnTempoCobrado,
+            this.ColumnPreco,
+            this.ColumnValorPagar});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 203);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(887, 254);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Visible = false;
+            // 
+            // ColumnPlaca
+            // 
+            this.ColumnPlaca.HeaderText = "Placa";
+            this.ColumnPlaca.Name = "ColumnPlaca";
+            this.ColumnPlaca.ReadOnly = true;
+            this.ColumnPlaca.Width = 300;
+            // 
+            // ColumnHoraEntrada
+            // 
+            this.ColumnHoraEntrada.HeaderText = "Hora Entrada";
+            this.ColumnHoraEntrada.Name = "ColumnHoraEntrada";
+            this.ColumnHoraEntrada.ReadOnly = true;
+            this.ColumnHoraEntrada.Width = 300;
+            // 
+            // ColumnHoraSaida
+            // 
+            this.ColumnHoraSaida.HeaderText = "Hora Saida";
+            this.ColumnHoraSaida.Name = "ColumnHoraSaida";
+            this.ColumnHoraSaida.ReadOnly = true;
+            this.ColumnHoraSaida.Visible = false;
+            // 
+            // ColumnDuracao
+            // 
+            this.ColumnDuracao.HeaderText = "Duração";
+            this.ColumnDuracao.Name = "ColumnDuracao";
+            this.ColumnDuracao.ReadOnly = true;
+            this.ColumnDuracao.Visible = false;
+            // 
+            // ColumnTempoCobrado
+            // 
+            this.ColumnTempoCobrado.HeaderText = "Tempo Cobrado";
+            this.ColumnTempoCobrado.Name = "ColumnTempoCobrado";
+            this.ColumnTempoCobrado.ReadOnly = true;
+            this.ColumnTempoCobrado.Visible = false;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            this.ColumnPreco.Visible = false;
+            // 
+            // ColumnValorPagar
+            // 
+            this.ColumnValorPagar.HeaderText = "Valor Pagar";
+            this.ColumnValorPagar.Name = "ColumnValorPagar";
+            this.ColumnValorPagar.ReadOnly = true;
+            this.ColumnValorPagar.Visible = false;
             // 
             // btnEntrada
             // 
@@ -162,7 +232,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 170);
+            this.label3.Location = new System.Drawing.Point(11, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(252, 24);
             this.label3.TabIndex = 7;
@@ -185,35 +255,31 @@
             // estacionadosToolStripMenuItem
             // 
             this.estacionadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.todosToolStripMenuItem,
             this.marcarEntradaToolStripMenuItem});
             this.estacionadosToolStripMenuItem.Name = "estacionadosToolStripMenuItem";
             this.estacionadosToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.estacionadosToolStripMenuItem.Text = "Estacionados";
             // 
-            // todosToolStripMenuItem
-            // 
-            this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.todosToolStripMenuItem.Text = "Todos";
-            // 
             // marcarEntradaToolStripMenuItem
             // 
             this.marcarEntradaToolStripMenuItem.Name = "marcarEntradaToolStripMenuItem";
-            this.marcarEntradaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcarEntradaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.marcarEntradaToolStripMenuItem.Text = "Marcar Entrada";
+            this.marcarEntradaToolStripMenuItem.Click += new System.EventHandler(this.MarcarEntradaToolStripMenuItem_Click);
             // 
             // carrosToolStripMenuItem
             // 
             this.carrosToolStripMenuItem.Name = "carrosToolStripMenuItem";
             this.carrosToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.carrosToolStripMenuItem.Text = "Carros";
+            this.carrosToolStripMenuItem.Click += new System.EventHandler(this.CarrosToolStripMenuItem_Click);
             // 
             // preçosToolStripMenuItem
             // 
             this.preçosToolStripMenuItem.Name = "preçosToolStripMenuItem";
             this.preçosToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.preçosToolStripMenuItem.Text = "Preços";
+            this.preçosToolStripMenuItem.Click += new System.EventHandler(this.PreçosToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -221,33 +287,62 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
-            // ColumnId
+            // comboBox1
             // 
-            this.ColumnId.HeaderText = "Id";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Visible = false;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Abertos",
+            "Todos",
+            "Placa"});
+            this.comboBox1.Location = new System.Drawing.Point(119, 463);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(202, 32);
+            this.comboBox1.TabIndex = 9;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
-            // ColumnPlaca
+            // label4
             // 
-            this.ColumnPlaca.HeaderText = "Placa";
-            this.ColumnPlaca.Name = "ColumnPlaca";
-            this.ColumnPlaca.ReadOnly = true;
-            this.ColumnPlaca.Width = 300;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 466);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 24);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Buscar por";
             // 
-            // ColumnHoraEntrada
+            // label5
             // 
-            this.ColumnHoraEntrada.HeaderText = "Hora Entrada";
-            this.ColumnHoraEntrada.Name = "ColumnHoraEntrada";
-            this.ColumnHoraEntrada.ReadOnly = true;
-            this.ColumnHoraEntrada.Width = 500;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(345, 466);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 24);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Placa";
+            this.label5.Visible = false;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(407, 463);
+            this.maskedTextBox1.Mask = "AAA-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 29);
+            this.maskedTextBox1.TabIndex = 12;
+            this.maskedTextBox1.Visible = false;
+            this.maskedTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MaskedTextBox1_KeyDown);
             // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(918, 469);
+            this.ClientSize = new System.Drawing.Size(918, 507);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -257,8 +352,7 @@
             this.Name = "TelaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estacionamento Carro Bem Guardado";
-            this.Activated += new System.EventHandler(this.TelaInicial_Activated);
-            this.Load += new System.EventHandler(this.TelaInicial_Load);
+            this.Load += new System.EventHandler(this.TelaInicial_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -281,15 +375,23 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPlaca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHoraEntrada;
         private System.Windows.Forms.ToolStripMenuItem estacionadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem todosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcarEntradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preçosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPlaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHoraEntrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHoraSaida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDuracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTempoCobrado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPreco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValorPagar;
     }
 }
 

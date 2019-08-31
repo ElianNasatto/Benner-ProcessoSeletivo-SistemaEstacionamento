@@ -21,26 +21,38 @@ namespace View
             InitializeComponent();
         }
 
+        //Botao salvar
         private void Button3_Click(object sender, EventArgs e)
         {
-            Estacionado estacionado = new Estacionado();
-            estacionado.IdCarro = carro.Id;
-            estacionado.DataEntrada = dateTimePicker1.Value;
-            estacionado.DataSaida = DateTime.Now;
-            bool inseriu = repository.Inserir(estacionado);
-            if (inseriu == true)
+
+            if (repository.VerificaJaEstaEstacionado(carro.Placa) == false)
             {
-                MessageBox.Show("Adicionado com sucesso","Adicionado",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                maskedTextBox1.Clear();
-                dateTimePicker1.Value = DateTime.Now;
+
+
+                Estacionado estacionado = new Estacionado();
+                estacionado.IdCarro = carro.Id;
+                estacionado.DataEntrada = dateTimePicker1.Value;
+                estacionado.DataSaida = DateTime.Now;
+                bool inseriu = repository.Inserir(estacionado);
+                if (inseriu == true)
+                {
+                    MessageBox.Show("Adicionado com sucesso", "Adicionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    maskedTextBox1.Clear();
+                    dateTimePicker1.Value = DateTime.Now;
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao adicionar, por favor tente novamente ou entre em contato com o suporte", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    maskedTextBox1.Clear();
+                    dateTimePicker1.Value = DateTime.Now;
+                }
             }
             else
             {
-                MessageBox.Show("Ocorreu um erro ao adicionar, por favor tente novamente ou entre em contato com o suporte","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Esta carro ja esta estacionado","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 maskedTextBox1.Clear();
                 dateTimePicker1.Value = DateTime.Now;
             }
-
         }
 
 
