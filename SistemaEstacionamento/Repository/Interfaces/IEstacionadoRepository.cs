@@ -9,7 +9,7 @@ namespace Repository.Interfaces
 {
     public interface IEstacionadoRepository
     {
-        int Inserir(Estacionado estacionado);
+        bool Inserir(Estacionado estacionado);
 
         bool Alterar(Estacionado estacionado);
 

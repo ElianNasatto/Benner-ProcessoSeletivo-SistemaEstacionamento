@@ -21,7 +21,7 @@ namespace Model
         public Carro Carro { get; set; }
         
         [Column("id_preco")]
-        public int IdPreco { get; set; }
+        public int? IdPreco { get; set; }
 
         [ForeignKey("IdPreco")]
         public Preco Preco { get; set; }

@@ -69,11 +69,12 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(239, 95);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(162, 29);
+            this.dateTimePicker2.Size = new System.Drawing.Size(281, 29);
             this.dateTimePicker2.TabIndex = 13;
+            this.dateTimePicker2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DateTimePicker2_KeyDown);
             // 
             // label3
             // 
@@ -92,7 +93,7 @@
             this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox4.Location = new System.Drawing.Point(415, 97);
+            this.textBox4.Location = new System.Drawing.Point(536, 97);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(105, 29);
             this.textBox4.TabIndex = 20;
@@ -102,7 +103,7 @@
             this.label6.AutoSize = true;
             this.label6.Enabled = false;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(411, 68);
+            this.label6.Location = new System.Drawing.Point(532, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 24);
             this.label6.TabIndex = 19;
@@ -112,7 +113,7 @@
             // 
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(415, 35);
+            this.textBox2.Location = new System.Drawing.Point(536, 35);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(105, 29);
             this.textBox2.TabIndex = 18;
@@ -122,7 +123,7 @@
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(411, 9);
+            this.label4.Location = new System.Drawing.Point(532, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 24);
             this.label4.TabIndex = 17;
@@ -132,7 +133,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Green;
-            this.button3.Location = new System.Drawing.Point(358, 132);
+            this.button3.Location = new System.Drawing.Point(479, 137);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(162, 48);
             this.button3.TabIndex = 26;
@@ -143,10 +144,10 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(239, 36);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(162, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(281, 29);
             this.dateTimePicker1.TabIndex = 25;
             // 
             // label2
@@ -194,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(545, 197);
+            this.ClientSize = new System.Drawing.Size(662, 197);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dateTimePicker1);

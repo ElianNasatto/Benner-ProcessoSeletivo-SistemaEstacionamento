@@ -34,22 +34,22 @@ namespace Repository.Repositories
 
         }
 
-        public int Inserir(Estacionado estacionado)
+        public bool Inserir(Estacionado estacionado)
         {
             estacionado.RegistroAtivo = true;
             context.Estacionados.Add(estacionado);
-            context.SaveChanges();
-            return estacionado.IdEstacionado;
+            var rowAffected = context.SaveChanges();
+            return rowAffected == 1;
         }
 
         public Estacionado ObterPelaPlaca(string placa)
         {
-            return context.Estacionados.Where(x => x.Carro.Placa == placa).FirstOrDefault();
+            return context.Estacionados.Include("carro").Where(x => x.Carro.Placa == placa).FirstOrDefault();
         }
 
         public List<Estacionado> ObterTodos()
         {
-            return context.Estacionados.ToList();
+            return context.Estacionados.Include("carro").Where(x => x.RegistroAtivo == true).ToList();
         }
     }
 }
