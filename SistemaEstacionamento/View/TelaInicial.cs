@@ -46,7 +46,7 @@ namespace View
             List<Estacionado> lista = repository.ObterTodosAberto();
             foreach (Estacionado estacionado in lista)
             {
-                    dataGridView1.Rows.Add(estacionado.IdEstacionado, estacionado.Carro.Placa, estacionado.DataEntrada);
+                dataGridView1.Rows.Add(estacionado.IdEstacionado, estacionado.Carro.Placa, estacionado.DataEntrada);
             }
         }
 
@@ -54,6 +54,10 @@ namespace View
         {
             if (dataGridView1.SelectedRows.Count == 1)
             {
+                if ((comboBox1.SelectedIndex == 2) && (dataGridView1.CurrentRow.Cells[3].Value.ToString() != "Nulo"))
+                {
+                    return;
+                }
                 TelaSaida tela = new TelaSaida(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
                 tela.Show();
             }
@@ -127,7 +131,7 @@ namespace View
 
                 foreach (Estacionado estacionadoFechado in repository.ObterTodosFechados())
                 {
-                    dataGridView1.Rows.Add(estacionadoFechado.IdEstacionado, estacionadoFechado.Carro.Placa, estacionadoFechado.DataEntrada, 
+                    dataGridView1.Rows.Add(estacionadoFechado.IdEstacionado, estacionadoFechado.Carro.Placa, estacionadoFechado.DataEntrada,
                         estacionadoFechado.DataSaida, estacionadoFechado.Duracao,
                         estacionadoFechado.TempoCobrado, estacionadoFechado.Preco.PrecoHora, estacionadoFechado.ValorPagar);
                 }
@@ -141,7 +145,6 @@ namespace View
                 dataGridView1.Columns[6].Visible = true;
                 dataGridView1.Columns[7].Visible = true;
                 maskedTextBox1.Visible = true;
-                btnSaida.Visible = false;
                 label5.Visible = true;
             }
         }
@@ -166,11 +169,11 @@ namespace View
                         {
                             if (estacionadoPlaca.Preco == null)
                             {
-                                dataGridView1.Rows.Add(estacionadoPlaca.IdEstacionado, estacionadoPlaca.Carro.Placa, estacionadoPlaca.DataEntrada, "Nulo", "Nulo", "Nulo", "Nulo","Nulo");
+                                dataGridView1.Rows.Add(estacionadoPlaca.IdEstacionado, estacionadoPlaca.Carro.Placa, estacionadoPlaca.DataEntrada, "Nulo", "Nulo", "Nulo", "Nulo", "Nulo");
                             }
                             else
                             {
-                            dataGridView1.Rows.Add(estacionadoPlaca.IdEstacionado, estacionadoPlaca.Carro.Placa, estacionadoPlaca.DataEntrada, estacionadoPlaca.DataSaida, estacionadoPlaca.Duracao, estacionadoPlaca.TempoCobrado, estacionadoPlaca.Preco.PrecoHora, estacionadoPlaca.ValorPagar);
+                                dataGridView1.Rows.Add(estacionadoPlaca.IdEstacionado, estacionadoPlaca.Carro.Placa, estacionadoPlaca.DataEntrada, estacionadoPlaca.DataSaida, estacionadoPlaca.Duracao, estacionadoPlaca.TempoCobrado, estacionadoPlaca.Preco.PrecoHora, estacionadoPlaca.ValorPagar);
                             }
 
                         }
@@ -186,6 +189,7 @@ namespace View
 
         private void TelaInicial_Activated_1(object sender, EventArgs e)
         {
+            AtualizaTabela();
             comboBox1.SelectedIndex = 0;
         }
 

@@ -17,7 +17,7 @@ namespace Repository.Repositories
 
         public bool Alterar(Estacionado estacionado)
         {
-            var estacionadoOriginal = context.Estacionados.First(x => x.IdEstacionado == estacionado.IdEstacionado);
+            Estacionado estacionadoOriginal = context.Estacionados.First(x => x.IdEstacionado == estacionado.IdEstacionado);
             if (estacionadoOriginal == null)
             {
                 return false;
@@ -32,8 +32,9 @@ namespace Repository.Repositories
                 estacionadoOriginal.ValorPagar = estacionado.ValorPagar;
                 estacionadoOriginal.IdPreco = estacionado.IdPreco;
                 estacionado.RegistroAtivo = false;
-                var rowsAffected = context.SaveChanges();
-                return rowsAffected == 1;
+                context.SaveChanges();
+                    
+                return true;
             }
         }
 

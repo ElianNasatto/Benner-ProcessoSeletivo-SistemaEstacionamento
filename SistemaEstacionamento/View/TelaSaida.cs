@@ -116,7 +116,7 @@ namespace View
                         {
                             estacionado.TempoCobrado = ((quantidadeMeiaHora / 2).ToString()+ ":30");
                         }
-                        estacionado.ValorPagar = quantidadeMeiaHora * (preco.PrecoHora / 2);
+                        estacionado.ValorPagar = quantidadeMeiaHora * precoMeiaHora;
                         textBox4.Text = estacionado.ValorPagar.ToString();
                         textBox3.Text = estacionado.TempoCobrado;
 
