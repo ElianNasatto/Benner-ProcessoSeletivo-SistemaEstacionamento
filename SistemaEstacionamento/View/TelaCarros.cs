@@ -45,9 +45,16 @@ namespace View
             if (placa == "   -")
             {
                 MessageBox.Show("Digite a placa corretamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                maskedTextBox1.Focus();
+                return;
             }
-            else
+            if (placa.Count() != 8)
             {
+                MessageBox.Show("Placa incorreta","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                maskedTextBox1.Focus();
+                return;
+            }
+            
                 if (idAlterar == -1)
                 {
                     if (repository.VerificaJaCadastrado(placa) == false)
@@ -75,7 +82,7 @@ namespace View
                     AtualizaTabela();
 
                 }
-            }
+            
         }
 
         private void TelaCarros_Load(object sender, EventArgs e)

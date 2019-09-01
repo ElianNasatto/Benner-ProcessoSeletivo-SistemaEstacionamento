@@ -63,7 +63,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(392, 178);
+            this.groupBox1.Size = new System.Drawing.Size(630, 122);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro Preço";
@@ -73,9 +73,9 @@
             this.btnSalvar.BackColor = System.Drawing.Color.White;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.Green;
-            this.btnSalvar.Location = new System.Drawing.Point(219, 125);
+            this.btnSalvar.Location = new System.Drawing.Point(500, 52);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(100, 26);
+            this.btnSalvar.Size = new System.Drawing.Size(100, 29);
             this.btnSalvar.TabIndex = 19;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -84,28 +84,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 25);
+            this.label1.Location = new System.Drawing.Point(372, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 24);
             this.label1.TabIndex = 18;
             this.label1.Text = "Valor";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(219, 52);
+            this.maskedTextBox1.Location = new System.Drawing.Point(376, 52);
             this.maskedTextBox1.Mask = "$00.00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 29);
             this.maskedTextBox1.TabIndex = 17;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MaskedTextBox1_MaskInputRejected);
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(30, 125);
+            this.dateTimePicker2.Location = new System.Drawing.Point(202, 52);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(162, 29);
             this.dateTimePicker2.TabIndex = 16;
@@ -113,9 +114,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 98);
+            this.label3.Location = new System.Drawing.Point(198, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 24);
             this.label3.TabIndex = 15;
@@ -170,9 +170,9 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 211);
+            this.groupBox2.Location = new System.Drawing.Point(12, 140);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(392, 354);
+            this.groupBox2.Size = new System.Drawing.Size(630, 425);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de Preços";
@@ -192,7 +192,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(357, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(595, 380);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
@@ -215,19 +215,21 @@
             this.ColumnDataInicial.HeaderText = "Data Inicial";
             this.ColumnDataInicial.Name = "ColumnDataInicial";
             this.ColumnDataInicial.ReadOnly = true;
+            this.ColumnDataInicial.Width = 220;
             // 
             // ColumnFinal
             // 
             this.ColumnFinal.HeaderText = "Data Final";
             this.ColumnFinal.Name = "ColumnFinal";
             this.ColumnFinal.ReadOnly = true;
+            this.ColumnFinal.Width = 220;
             // 
             // TelaPrecos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(426, 623);
+            this.ClientSize = new System.Drawing.Size(654, 623);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnAlterar);

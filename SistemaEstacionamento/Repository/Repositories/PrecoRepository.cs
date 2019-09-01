@@ -61,12 +61,12 @@ namespace Repository.Repositories
 
         public List<Preco> ObterTodos()
         {
-            return context.Precos.Where(x => x.RegistroAtivo == true).ToList();
+            return context.Precos.Where(x => x.RegistroAtivo == true && x.DataFinal > DateTime.Now).ToList();
         }
 
         public bool VerificaJaCadastrado(DateTime dataInicial, DateTime dataFinal)
         {
-            var cadastrado = context.Precos.Where(x => x.DataInicial == dataInicial && x.DataFinal == dataFinal && x.RegistroAtivo == true).FirstOrDefault();
+            var cadastrado = context.Precos.Where(x => x.DataInicial == dataInicial || x.DataFinal == dataFinal && x.RegistroAtivo == true).FirstOrDefault();
             if (cadastrado == null)
             {
                 return false;

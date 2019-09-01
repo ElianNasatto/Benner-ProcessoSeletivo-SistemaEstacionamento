@@ -46,9 +46,15 @@ namespace View
         //Botão salvar
         private void Button3_Click(object sender, EventArgs e)
         {
+            estacionado.Duracao = textBox2.Text;
+            if (estacionado.Duracao == "")
+            {
+                MessageBox.Show("Deve ser feito o calculo altes de salvar, selecione o preço a data de entrada e depois a de saida e precione enter","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                dateTimePicker2.Focus();
+                return;
+            }
             estacionado.DataEntrada = dateTimePicker1.Value;
             estacionado.DataSaida = dateTimePicker2.Value;
-            estacionado.Duracao = textBox2.Text;
             estacionado.IdPreco = preco.IdPreco;
             estacionado.RegistroAtivo = false;
             bool fechado = repository.Alterar(estacionado);

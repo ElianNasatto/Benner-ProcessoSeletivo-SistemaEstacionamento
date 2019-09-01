@@ -28,6 +28,7 @@ namespace View
         }
 
         private int idAlterar = -1;
+
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             string valor = maskedTextBox1.Text;
@@ -161,6 +162,17 @@ namespace View
             {
                 TelaPrecos.ActiveForm.Close();
             }
+        }
+
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MaskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

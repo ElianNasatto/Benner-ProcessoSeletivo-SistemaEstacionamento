@@ -24,6 +24,12 @@ namespace View
         //Botao salvar
         private void Button3_Click(object sender, EventArgs e)
         {
+            if (carro.Placa == null)
+            {
+                MessageBox.Show("Por favor selecione uma placa","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                btnPlaca.Focus();
+                return;
+            }
 
             if (repository.VerificaJaEstaEstacionado(carro.Placa) == false)
             {

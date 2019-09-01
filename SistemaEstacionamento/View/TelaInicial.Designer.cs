@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInicial));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDuracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTempoCobrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnValorPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnSaida = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,6 +49,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDuracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTempoCobrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnValorPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -69,14 +69,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
@@ -91,69 +91,13 @@
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(887, 254);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.HeaderText = "Id";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Visible = false;
-            // 
-            // ColumnPlaca
-            // 
-            this.ColumnPlaca.HeaderText = "Placa";
-            this.ColumnPlaca.Name = "ColumnPlaca";
-            this.ColumnPlaca.ReadOnly = true;
-            this.ColumnPlaca.Width = 300;
-            // 
-            // ColumnHoraEntrada
-            // 
-            this.ColumnHoraEntrada.HeaderText = "Hora Entrada";
-            this.ColumnHoraEntrada.Name = "ColumnHoraEntrada";
-            this.ColumnHoraEntrada.ReadOnly = true;
-            this.ColumnHoraEntrada.Width = 300;
-            // 
-            // ColumnHoraSaida
-            // 
-            this.ColumnHoraSaida.HeaderText = "Hora Saida";
-            this.ColumnHoraSaida.Name = "ColumnHoraSaida";
-            this.ColumnHoraSaida.ReadOnly = true;
-            this.ColumnHoraSaida.Visible = false;
-            // 
-            // ColumnDuracao
-            // 
-            this.ColumnDuracao.HeaderText = "Duração";
-            this.ColumnDuracao.Name = "ColumnDuracao";
-            this.ColumnDuracao.ReadOnly = true;
-            this.ColumnDuracao.Visible = false;
-            // 
-            // ColumnTempoCobrado
-            // 
-            this.ColumnTempoCobrado.HeaderText = "Tempo Cobrado";
-            this.ColumnTempoCobrado.Name = "ColumnTempoCobrado";
-            this.ColumnTempoCobrado.ReadOnly = true;
-            this.ColumnTempoCobrado.Visible = false;
-            // 
-            // ColumnPreco
-            // 
-            this.ColumnPreco.HeaderText = "Preço";
-            this.ColumnPreco.Name = "ColumnPreco";
-            this.ColumnPreco.ReadOnly = true;
-            this.ColumnPreco.Visible = false;
-            // 
-            // ColumnValorPagar
-            // 
-            this.ColumnValorPagar.HeaderText = "Valor Pagar";
-            this.ColumnValorPagar.Name = "ColumnValorPagar";
-            this.ColumnValorPagar.ReadOnly = true;
-            this.ColumnValorPagar.Visible = false;
             // 
             // btnEntrada
             // 
@@ -333,6 +277,64 @@
             this.maskedTextBox1.TabIndex = 12;
             this.maskedTextBox1.Visible = false;
             this.maskedTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MaskedTextBox1_KeyDown);
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Visible = false;
+            // 
+            // ColumnPlaca
+            // 
+            this.ColumnPlaca.HeaderText = "Placa";
+            this.ColumnPlaca.Name = "ColumnPlaca";
+            this.ColumnPlaca.ReadOnly = true;
+            this.ColumnPlaca.Width = 300;
+            // 
+            // ColumnHoraEntrada
+            // 
+            this.ColumnHoraEntrada.HeaderText = "Hora Entrada";
+            this.ColumnHoraEntrada.Name = "ColumnHoraEntrada";
+            this.ColumnHoraEntrada.ReadOnly = true;
+            this.ColumnHoraEntrada.Width = 300;
+            // 
+            // ColumnHoraSaida
+            // 
+            this.ColumnHoraSaida.HeaderText = "Hora Saida";
+            this.ColumnHoraSaida.Name = "ColumnHoraSaida";
+            this.ColumnHoraSaida.ReadOnly = true;
+            this.ColumnHoraSaida.Visible = false;
+            this.ColumnHoraSaida.Width = 300;
+            // 
+            // ColumnDuracao
+            // 
+            this.ColumnDuracao.HeaderText = "Duração";
+            this.ColumnDuracao.Name = "ColumnDuracao";
+            this.ColumnDuracao.ReadOnly = true;
+            this.ColumnDuracao.Visible = false;
+            this.ColumnDuracao.Width = 200;
+            // 
+            // ColumnTempoCobrado
+            // 
+            this.ColumnTempoCobrado.HeaderText = "Tempo Cobrado";
+            this.ColumnTempoCobrado.Name = "ColumnTempoCobrado";
+            this.ColumnTempoCobrado.ReadOnly = true;
+            this.ColumnTempoCobrado.Visible = false;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            this.ColumnPreco.Visible = false;
+            // 
+            // ColumnValorPagar
+            // 
+            this.ColumnValorPagar.HeaderText = "Valor Pagar";
+            this.ColumnValorPagar.Name = "ColumnValorPagar";
+            this.ColumnValorPagar.ReadOnly = true;
+            this.ColumnValorPagar.Visible = false;
             // 
             // TelaInicial
             // 
