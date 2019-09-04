@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Repository.dll" size="19456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Repository.dll" size="28160">
       <assemblyIdentity name="Repository" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hjMmx/eqJKRB1WEd/5VZ38dQQ2Ur/XX8sSSAZbs4TVI=</dsig:DigestValue>
+        <dsig:DigestValue>fx8OTVZAj90yRv2+WXYU+Yk3BVXAr6bwOR6xH0cj980=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -107,7 +107,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>hY2MPaAyArAg2AqQUvlpJA/4hx8GYYJNA5APbgHagmc=</dsig:DigestValue>
+      <dsig:DigestValue>rnl4oIF/N9Syj6TcfCpgmBau6DGL3cCLoWgHgu+YW2A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="App_Data\Database_log.ldf" size="8388608" writeableType="applicationData">
@@ -116,7 +116,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Iq8Zc19AWjWXFRKzbobadZvJxLODzYgiKczEL3vZPc0=</dsig:DigestValue>
+      <dsig:DigestValue>lfjWiCg7HihN4w9enmcSo8fzv7gLzaXp9UNqRWqz6b8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\icone.ico" size="67646">
@@ -128,13 +128,13 @@
       <dsig:DigestValue>U+J50xLyqeSYRaLQbQKu/K5CaXZYun/pfEPam1kLyyg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="View.exe.config" size="1013">
+  <file name="View.exe.config" size="1416">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tyYtox+U6NgglkkknKVe/kMvnyIyfO81SK04QC5KXfk=</dsig:DigestValue>
+      <dsig:DigestValue>T6kqs1Joyy6B+X0IhCTS8ZOuZumKxzJshp9cY4hSokE=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

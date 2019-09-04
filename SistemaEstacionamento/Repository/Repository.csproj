@@ -51,9 +51,9 @@
     <Compile Include="Interfaces\ICarroRepository.cs" />
     <Compile Include="Interfaces\IEstacionadoRepository.cs" />
     <Compile Include="Interfaces\IPrecoRepository.cs" />
-    <Compile Include="Migrations\201908311630440_bd.cs" />
-    <Compile Include="Migrations\201908311630440_bd.Designer.cs">
-      <DependentUpon>201908311630440_bd.cs</DependentUpon>
+    <Compile Include="Migrations\201909032359199_initial.cs" />
+    <Compile Include="Migrations\201909032359199_initial.Designer.cs">
+      <DependentUpon>201909032359199_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +73,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908311630440_bd.resx">
-      <DependentUpon>201908311630440_bd.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909032359199_initial.resx">
+      <DependentUpon>201909032359199_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
