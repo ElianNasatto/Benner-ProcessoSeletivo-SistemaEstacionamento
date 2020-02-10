@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="View.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="View.exe" version="1.0.0.7" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="View" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -14,16 +14,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Opções de Manifesto UAC
-          Se desejar mudar o nível de Controle de Conta de Usuário do Windows, substitua o
-          nó requestedExecutionLevel por um dos seguintes.
+          Opções de Manifesto do UAC
+          Para alterar o nível de Controle de Conta de Usuário do Windows, substitua o nó
+          requestedExecutionLevel por um dos seguintes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Se deseja usar a Virtualização de Arquivos e Registro para compatibilidade
-         com versões anteriores, exclua o nó requestedExecutionLevel.
+         Para utilizar a Virtualização de Arquivos e Registro para manter a compatibilidade com versões anteriores,
+         exclua o nó requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -73,31 +73,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Og7HGUQUi61C0+lMTNCsEu8FzDugOnYJGyODOBWXu9U=</dsig:DigestValue>
+        <dsig:DigestValue>NoHi58EdvbIre2sFOziVVdOZEUxwg4ag39bN0PmrNbk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Repository.dll" size="28160">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Repository.dll" size="27648">
       <assemblyIdentity name="Repository" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fx8OTVZAj90yRv2+WXYU+Yk3BVXAr6bwOR6xH0cj980=</dsig:DigestValue>
+        <dsig:DigestValue>wwqUDHEbaccKsB2Q8aaVOG1ON9/f1u2BsO4nIolcCuY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="View.exe" size="501712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="View.exe" size="500736">
       <assemblyIdentity name="View" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2Ar/PvlKw+X3xfyzvd4g+z9Iz+3hVxCtAWcgIkCzvp4=</dsig:DigestValue>
+        <dsig:DigestValue>YBmZHd9QZMsNiIAP29Zg5L5EZuFjjngcLea9CCl6bIY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -107,7 +107,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rnl4oIF/N9Syj6TcfCpgmBau6DGL3cCLoWgHgu+YW2A=</dsig:DigestValue>
+      <dsig:DigestValue>yBAWMZ8aivNhwVBdfuWQRRZw+qZMQsPRZNK7sDOqYT4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="App_Data\Database_log.ldf" size="8388608" writeableType="applicationData">
@@ -116,7 +116,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lfjWiCg7HihN4w9enmcSo8fzv7gLzaXp9UNqRWqz6b8=</dsig:DigestValue>
+      <dsig:DigestValue>MNjZgRCgmwJ27clN614THiGgbDCI/xqegFssfjpA8j4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\icone.ico" size="67646">
@@ -128,13 +128,13 @@
       <dsig:DigestValue>U+J50xLyqeSYRaLQbQKu/K5CaXZYun/pfEPam1kLyyg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="View.exe.config" size="1416">
+  <file name="View.exe.config" size="1276">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>T6kqs1Joyy6B+X0IhCTS8ZOuZumKxzJshp9cY4hSokE=</dsig:DigestValue>
+      <dsig:DigestValue>WNsQbmZTAW5PPvOU9pMbfiFeriN8fuZoAXptWlTsmug=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -9,9 +9,8 @@ C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\Si
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\EntityFramework.xml
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
-C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.Migrations.initial.resources
+C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.csproj.GenerateResource.cache
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.csproj.CopyComplete
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.dll
 C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.pdb
-C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.Migrations.initial.resources
-C:\Users\elian\Documents\GitHub\Benner-ProcessoSeletivo-SistemaEstacionamento\SistemaEstacionamento\Repository\obj\Debug\Repository.csproj.GenerateResource.cache
