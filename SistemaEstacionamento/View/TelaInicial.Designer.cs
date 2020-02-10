@@ -32,6 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInicial));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDuracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTempoCobrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnValorPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnSaida = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,14 +57,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDuracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTempoCobrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnValorPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -98,6 +99,64 @@
             this.dataGridView1.Size = new System.Drawing.Size(887, 254);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Visible = false;
+            // 
+            // ColumnPlaca
+            // 
+            this.ColumnPlaca.HeaderText = "Placa";
+            this.ColumnPlaca.Name = "ColumnPlaca";
+            this.ColumnPlaca.ReadOnly = true;
+            this.ColumnPlaca.Width = 300;
+            // 
+            // ColumnHoraEntrada
+            // 
+            this.ColumnHoraEntrada.HeaderText = "Hora Entrada";
+            this.ColumnHoraEntrada.Name = "ColumnHoraEntrada";
+            this.ColumnHoraEntrada.ReadOnly = true;
+            this.ColumnHoraEntrada.Width = 300;
+            // 
+            // ColumnHoraSaida
+            // 
+            this.ColumnHoraSaida.HeaderText = "Hora Saida";
+            this.ColumnHoraSaida.Name = "ColumnHoraSaida";
+            this.ColumnHoraSaida.ReadOnly = true;
+            this.ColumnHoraSaida.Visible = false;
+            this.ColumnHoraSaida.Width = 300;
+            // 
+            // ColumnDuracao
+            // 
+            this.ColumnDuracao.HeaderText = "Duração";
+            this.ColumnDuracao.Name = "ColumnDuracao";
+            this.ColumnDuracao.ReadOnly = true;
+            this.ColumnDuracao.Visible = false;
+            this.ColumnDuracao.Width = 200;
+            // 
+            // ColumnTempoCobrado
+            // 
+            this.ColumnTempoCobrado.HeaderText = "Tempo Cobrado";
+            this.ColumnTempoCobrado.Name = "ColumnTempoCobrado";
+            this.ColumnTempoCobrado.ReadOnly = true;
+            this.ColumnTempoCobrado.Visible = false;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            this.ColumnPreco.Visible = false;
+            // 
+            // ColumnValorPagar
+            // 
+            this.ColumnValorPagar.HeaderText = "Valor Pagar";
+            this.ColumnValorPagar.Name = "ColumnValorPagar";
+            this.ColumnValorPagar.ReadOnly = true;
+            this.ColumnValorPagar.Visible = false;
             // 
             // btnEntrada
             // 
@@ -189,7 +248,8 @@
             this.estacionadosToolStripMenuItem,
             this.carrosToolStripMenuItem,
             this.preçosToolStripMenuItem,
-            this.sobreToolStripMenuItem});
+            this.sobreToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(918, 24);
@@ -278,63 +338,12 @@
             this.maskedTextBox1.Visible = false;
             this.maskedTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MaskedTextBox1_KeyDown);
             // 
-            // ColumnId
+            // toolStripMenuItem1
             // 
-            this.ColumnId.HeaderText = "Id";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Visible = false;
-            // 
-            // ColumnPlaca
-            // 
-            this.ColumnPlaca.HeaderText = "Placa";
-            this.ColumnPlaca.Name = "ColumnPlaca";
-            this.ColumnPlaca.ReadOnly = true;
-            this.ColumnPlaca.Width = 300;
-            // 
-            // ColumnHoraEntrada
-            // 
-            this.ColumnHoraEntrada.HeaderText = "Hora Entrada";
-            this.ColumnHoraEntrada.Name = "ColumnHoraEntrada";
-            this.ColumnHoraEntrada.ReadOnly = true;
-            this.ColumnHoraEntrada.Width = 300;
-            // 
-            // ColumnHoraSaida
-            // 
-            this.ColumnHoraSaida.HeaderText = "Hora Saida";
-            this.ColumnHoraSaida.Name = "ColumnHoraSaida";
-            this.ColumnHoraSaida.ReadOnly = true;
-            this.ColumnHoraSaida.Visible = false;
-            this.ColumnHoraSaida.Width = 300;
-            // 
-            // ColumnDuracao
-            // 
-            this.ColumnDuracao.HeaderText = "Duração";
-            this.ColumnDuracao.Name = "ColumnDuracao";
-            this.ColumnDuracao.ReadOnly = true;
-            this.ColumnDuracao.Visible = false;
-            this.ColumnDuracao.Width = 200;
-            // 
-            // ColumnTempoCobrado
-            // 
-            this.ColumnTempoCobrado.HeaderText = "Tempo Cobrado";
-            this.ColumnTempoCobrado.Name = "ColumnTempoCobrado";
-            this.ColumnTempoCobrado.ReadOnly = true;
-            this.ColumnTempoCobrado.Visible = false;
-            // 
-            // ColumnPreco
-            // 
-            this.ColumnPreco.HeaderText = "Preço";
-            this.ColumnPreco.Name = "ColumnPreco";
-            this.ColumnPreco.ReadOnly = true;
-            this.ColumnPreco.Visible = false;
-            // 
-            // ColumnValorPagar
-            // 
-            this.ColumnValorPagar.HeaderText = "Valor Pagar";
-            this.ColumnValorPagar.Name = "ColumnValorPagar";
-            this.ColumnValorPagar.ReadOnly = true;
-            this.ColumnValorPagar.Visible = false;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(63, 20);
+            this.toolStripMenuItem1.Text = "Exportar";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // TelaInicial
             // 
@@ -395,6 +404,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTempoCobrado;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPreco;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValorPagar;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

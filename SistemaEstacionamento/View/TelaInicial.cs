@@ -198,6 +198,12 @@ namespace View
             TelaSobre tela = new TelaSobre();
             tela.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaExportar tela = new TelaExportar();
+            tela.Show();
+        }
     }
 }
 
