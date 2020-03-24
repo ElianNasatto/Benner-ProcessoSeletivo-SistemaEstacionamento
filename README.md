@@ -1,5 +1,5 @@
 SistemaEstacionamento
-Pequeno sistema para controle de estacionamento para um processo seletivo na empresa Benner.
+Pequeno sistema para controle de estacionamento.
 
 
 Processo de instalação -
