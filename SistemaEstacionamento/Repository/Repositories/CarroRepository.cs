@@ -10,7 +10,7 @@ namespace Repository.Repositories
 {
     public class CarroRepository : ICarroRepository
     {
-        private SistemContext context = new SistemContext();
+        private SistemContext context = new UnitOfWork().ObterContexto();
 
         public bool Alterar(Carro carro)
         {

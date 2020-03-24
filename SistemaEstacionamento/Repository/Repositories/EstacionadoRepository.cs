@@ -11,9 +11,7 @@ namespace Repository.Repositories
     public class EstacionadoRepository : IEstacionadoRepository
     {
 
-        private SistemContext context = new SistemContext();
-
-        
+        private SistemContext context = new UnitOfWork().ObterContexto();
 
         public bool Alterar(Estacionado estacionado)
         {

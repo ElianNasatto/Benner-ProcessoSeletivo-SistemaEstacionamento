@@ -10,7 +10,7 @@ namespace Repository.Repositories
 {
     public class PrecoRepository : IPrecoRepository
     {
-        private SistemContext context = new SistemContext();
+        private SistemContext context = new UnitOfWork().ObterContexto();
         public bool Alterar(Preco preco)
         {
             var precoAntigo = context.Precos.Where(x => x.IdPreco == preco.IdPreco && x.RegistroAtivo == true).FirstOrDefault();

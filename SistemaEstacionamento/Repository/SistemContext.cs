@@ -10,9 +10,11 @@ namespace Repository
 {
     public class SistemContext : DbContext
     {
-        public SistemContext() : base("SqlServerConnection")
+        public SistemContext() : base("View.Properties.Settings.SqlServerConnection")
         {
-
+            //Irá criar o .mdf caso nao exista
+            Database.CreateIfNotExists();
+            Database.SetInitializer<SistemContext>(null);
         }
 
         public DbSet<Preco> Precos { get; set; }
@@ -20,5 +22,8 @@ namespace Repository
         public DbSet<Carro> Carros { get; set; }
 
         public DbSet<Estacionado> Estacionados { get; set; }
+
     }
+
+
 }

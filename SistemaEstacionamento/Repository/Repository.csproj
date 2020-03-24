@@ -61,6 +61,7 @@
     <Compile Include="Repositories\EstacionadoRepository.cs" />
     <Compile Include="Repositories\PrecoRepository.cs" />
     <Compile Include="SistemContext.cs" />
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
